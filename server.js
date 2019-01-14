@@ -35,4 +35,16 @@ app.get('/', (req, res) => {
   })
 })
 
+app.get('/chores', (req, res) => {
+  res.render('pages/chores', {
+    choreSet: choreSet
+  })
+})
+
+app.get('/config', (req, res) => {
+  res.render('pages/config', {
+    choreSet: choreSet
+  })
+})
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

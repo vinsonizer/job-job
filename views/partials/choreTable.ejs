@@ -1,0 +1,16 @@
+<table class="table">
+  <tr>
+    <th scope="col">Owner</th>
+    <th scope="col">Chore</th>
+    <th scope="col">Complete</th>
+  </tr>
+  <% for(var i=0; i< choreSet.length; i++) { %>
+    <% for(var j=0; j < choreSet[i].chores.length; j++) { %>
+      <tr>
+        <td><%= choreSet[i].name %></td>
+        <td><%= choreSet[i].chores[j].name %></td>
+        <td><%= choreSet[i].chores[j].complete %></td>
+      </tr>
+    <% } %>
+  <% } %>
+</table>

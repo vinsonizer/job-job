@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <% include ../partials/head %>
+</head>
+
+<body class="container">
+
+  <header>
+    <% include ../partials/header %>
+  </header>
+
+  <main>
+    <div class="content">
+      <div class="newChoreForm">
+        <form action="/config" method="post">
+          <div class="form-group">
+            <label for="owner">Who:</label>
+            <input type="text" class="form-control" id="choreOwner" aria-describedby="choreOwnerHelp" placeholder="Enter Chore Owner">
+            <small id="choreOwnerHelp" class="form-text text-muted">Who needs to do the work</small>
+          </div>
+          <div class="form-group">
+            <label for="name">Chore Name:</label>
+            <input type="text" class="form-control" id="choreName" aria-describedby="choreNameHelp" placeholder="Enter Chore Name">
+            <small id="choreNameHelp" class="form-text text-muted">This is the work to be done</small>
+          </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+      <div class="theChores">
+        <% include ../partials/choreTable %>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <% include ../partials/footer %>
+  </footer>
+
+</body>
+
+</html>
