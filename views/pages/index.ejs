@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <% include ../partials/head %>
+</head>
+
+<body class="container">
+
+  <header>
+    <% include ../partials/header %>
+  </header>
+
+  <main>
+    <div class="content">
+      <table class="table">
+        <tr>
+          <th scope="col">Owner</th>
+          <th scope="col">Chore</th>
+          <th scope="col">Complete</th>
+        </tr>
+        <% for(var i=0; i< choreSet.length; i++) { %>
+          <% for(var j=0; j < choreSet[i].chores.length; j++) { %>
+            <tr>
+              <td><%= choreSet[i].name %></td>
+              <td><%= choreSet[i].chores[j].name %></td>
+              <td><%= choreSet[i].chores[j].complete %></td>
+            </tr>
+          <% } %>
+        <% } %>
+      </table>
+    </div>
+  </main>
+
+  <footer>
+    <% include ../partials/footer %>
+  </footer>
+
+</body>
+
+</html>

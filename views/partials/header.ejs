@@ -1,0 +1,20 @@
+<nav class="navbar navbar-default" role="navigation">
+<div class="container-fluid">
+
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+            <span class="glyphicon glyphicon glyphicon-tree-deciduous"></span>
+          All Chores
+        </a>
+
+        <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <% for(var i=0; i < choreSet.length; i++) { %>
+              <li><a href="#"><%= choreSet[i].name %></a></li>
+            <% } %>
+            <li><a href="/config">Config</a></li>
+        </ul>
+    </div>
+
+</div>
+</nav>
